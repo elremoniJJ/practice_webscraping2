@@ -1,0 +1,3 @@
+QUARTAPP='hello'
+QUARTENV=development
+SECRET_KEY='secret_quart_key'

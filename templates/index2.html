@@ -1,0 +1,47 @@
+
+{% extends 'main.html' %}
+
+{% block content %}
+
+	{% for message in get_flashed_messages() %}
+		<div class="alert alert-primary alert-dismissible fade show" role="alert">
+  			{{ message }}
+  			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+
+	{% endfor %}
+
+
+	<div class="shadow p-3 mb-5 bg-body rounded">
+		<h2>Page 1</h2>
+		<small>
+			https://www.careerjet.vn/search/jobs?s=python&radius=100&sort=relevance
+		</small>
+		<table class="table table-hover table-bordered table-striped">
+			<tr>
+				<td><strong>Company</strong></td>
+				<td><strong>Skills</strong></td>
+				<td><strong>Location</strong></td>
+				<td><strong>Dated</strong></td>
+			</tr>
+      {% for i in thisBS4 %}
+    			<tr>
+      				<td>{{ i[0] }}</td>
+      				<td>{{ i[1] }}</td>
+      				<td>{{ i[2] }}</td>
+      				<td>{{ i[3] }}</td>
+    			</tr>
+  		{% endfor %}
+
+		</table>
+	</div>
+
+
+
+
+
+
+	<br><br>
+	<br><br>
+
+{% endblock %}
